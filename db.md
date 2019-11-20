@@ -20,6 +20,7 @@
         ...
     }
     orders: [<order_id>, <order_id>, ...]
+    charity: [<String>, <String>, ...]
     location : {
         type : <GeoJSON Type>,
         coordinates : [<latitude>, <longitude>]
@@ -35,16 +36,23 @@
             id: <item_id>
             quantity: <Integer>
             additional_information: <String>
+            time_placed: <DateTime>
+            etc: <DateTime>
+            carryout: <Boolean>
         },
         {
             id: <item_id>
             quantity: <Integer>
             additional_information: <String>
+            time_placed: <DateTime>
+            etc: <DateTime>
+            carryout: <Boolean>
         },
         ...
     ]
     gross_price: <Double>
     sales_price: <Double>
+    pickup_time: <DateTime>
     fulfilled: <Boolean>
     ```
 
