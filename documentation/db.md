@@ -31,18 +31,18 @@
 * The Following Denotes A Singular Entry In The Document
     ```
     _id: <ObjectID>
+    restaurant_id: <ObjectID>
+    user_id: <ObjectID>
     order: [
         {
             id: <item_id>
             quantity: <Integer>
             additional_information: <String>
-            carryout: <Boolean>
         },
         {
             id: <item_id>
             quantity: <Integer>
             additional_information: <String>
-            carryout: <Boolean>
         },
         ...
     ]
@@ -50,6 +50,7 @@
     sales_price: <Double>
     time_placed: <DateTime>
     pickup_time: <DateTime>
+    carryout: <Boolean>
     fulfilled: <Boolean>
     ```
 
@@ -59,5 +60,6 @@
     _id: <ObjectID> 
     name: <String>
     price: <Double>
+    description: <String>
     image: <Blob>
     ```
