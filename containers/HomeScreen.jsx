@@ -1,8 +1,10 @@
 import React from 'react';
 import { StyleSheet, Button, Text, View } from 'react-native';
+import { ColorPalette } from '../constants/colorPalette';
 
 import { connect } from 'react-redux';
 import { sampleAction } from '../actions/fooActions';
+import { sampleRestaurant } from '../constants/sampleQueryResponse';
 
 class HomeScreen extends React.Component {
     render() {
@@ -22,17 +24,15 @@ class HomeScreen extends React.Component {
 
 const styles = StyleSheet.create({
     container: {
+        backgroundColor: ColorPalette.white,
         flex: 1,
-        backgroundColor: '#fff',
-        alignItems: 'center',
-        justifyContent: 'center',
     },
 });
 
 const mapStateToProps = store => {
     return {
-      sample: store.sample,
+        sample: store.sample,
     }
-}
+};
 
 export default connect(mapStateToProps, undefined)(HomeScreen);
