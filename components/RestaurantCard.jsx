@@ -57,7 +57,7 @@ const styles = StyleSheet.create({
 		position: 'absolute',
 		width: '100%',
 
-		bottom: 0,
+		bottom: 0
 	},
 	restaurantNameText: {
 		color: ColorPalette.white,
@@ -72,5 +72,5 @@ const styles = StyleSheet.create({
 		color: ColorPalette.orange,
 		fontSize: 18,
 		fontWeight: 'bold'
-	},
+	}
 });

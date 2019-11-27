@@ -5,9 +5,9 @@ import Router from './router';
 import store from './store';
 
 export default function App() {
-  return (
-    <Provider store={store}>
-      <Router />
-    </Provider>
-  );
+	return (
+		<Provider store={store}>
+			<Router />
+		</Provider>
+	);
 };
