@@ -1,87 +1,95 @@
-import React from 'react'
-import { View, Image, StyleSheet, Text, Picker } from 'react-native'
-import { LinearGradient } from 'expo-linear-gradient'
-import { ColorPalette } from '../constants/colorPalette'
-import { MaterialIcons } from '@expo/vector-icons'
-import { TouchableOpacity } from 'react-native-gesture-handler'
-import { getStatusBarHeight } from 'react-native-status-bar-height'
+import React from 'react';
+import { View, Button, Image, StyleSheet, Text, Picker } from 'react-native';
+import { LinearGradient } from 'expo-linear-gradient';
+import { ColorPalette } from '../constants/colorPalette';
+import { MaterialIcons } from '@expo/vector-icons';
+import { CustomPicker } from './CustomPicker';
+import { TouchableOpacity } from 'react-native-gesture-handler';
 
 export class ExploreDropdown extends React.Component {
-	state = { showDropdown: false }
+	state = {
+		showDropdown: false,
+		selectedValue: '',
+	};
 
 	_togglePicker = () => {
-		this.setState({ showDropdown: !this.state.showDropdown })
-	}
+		this.setState({ showDropdown: !this.state.showDropdown });
+	};
+
+	_hidePicker = () => {
+		this.setState({ showDropdown: false });
+	};
+
+	_onValueChange = newValue => {
+		this.setState({ selectedValue: newValue });
+	};
+
+	_clear = () => {
+		this.setState({ selectedValue: '' });
+	};
+
+	_onValueChange = newValue => {
+		if (newValue != null) this.setState({ selectedValue: newValue });
+		this._hidePicker();
+	};
 
 	render() {
-		const { title, options } = this.props
+		const { title, options, onPress } = this.props;
+		const buttonValue = this.state.selectedValue
+			? this.state.selectedValue
+			: title;
+		const buttonIcon = this.state.selectedValue ? (
+			<MaterialIcons name="close"></MaterialIcons>
+		) : (
+			<MaterialIcons name="keyboard-arrow-down"></MaterialIcons>
+		);
+
 		return (
 			<View style={styles.container}>
-				<Text onPress={() => this._togglePicker()}>{title}</Text>
-				{this.state.showDropdown && (
-					<Picker
-						selectedValue={'Hello!'}
-						style={{ height: 50, width: 100 }}
-						onValueChange={(itemValue, itemIndex) =>
-							console.log(itemValue)
-						}
-					>
-						{options.map((option, index) => (
-							<Picker.Item
-								key={index}
-								label={option}
-								value={option}
-							/>
-						))}
-					</Picker>
+				<View
+					style={{
+						flexDirection: 'row',
+						alignItems: 'center',
+						paddingVertical: 10,
+						paddingHorizontal: 15,
+						backgroundColor: '#DDD',
+						borderRadius: 20,
+					}}
+				>
+					<TouchableOpacity onPress={() => this._togglePicker()}>
+						<Text>{buttonValue}</Text>
+					</TouchableOpacity>
+
+					<View style={{ marginLeft: 10 }}>
+						<TouchableOpacity
+							onPress={() => {
+								this.state.selectedValue
+									? this._clear()
+									: this._togglePicker();
+							}}
+						>
+							{buttonIcon}
+						</TouchableOpacity>
+					</View>
+				</View>
+
+				{this.state.showDropdown == true && (
+					<CustomPicker
+						visible={this.state.showDropdown}
+						onPress={this._onValueChange}
+						options={options}
+					></CustomPicker>
 				)}
 			</View>
-		)
+		);
 	}
 }
 
 const styles = StyleSheet.create({
 	container: {
 		flex: 1,
-		backgroundColor: ColorPalette.orange,
-		borderRadius: 10,
-	},
-	gradient: {
-		position: 'absolute',
-		left: 0,
-		right: 0,
-		top: 0,
-		width: '100%',
-		height: '100%',
-		borderRadius: 10,
-	},
-	image: {
-		width: '100%',
-		height: '100%',
-		borderRadius: 10,
-	},
-	restaurantDetailsContainer: {
-		flexDirection: 'row',
-		width: '100%',
-		position: 'absolute',
-		bottom: 0,
-		padding: 10,
-		justifyContent: 'space-between',
 		alignItems: 'center',
+		justifyContent: 'center',
+		backgroundColor: ColorPalette.white,
 	},
-	restaurantNameText: {
-		fontSize: 18,
-		fontWeight: 'bold',
-		color: ColorPalette.white,
-	},
-	restaurantLocationText: {
-		fontSize: 14,
-		color: ColorPalette.white,
-	},
-	restaurantRatingText: {
-		fontSize: 18,
-		fontWeight: 'bold',
-		color: ColorPalette.orange,
-	},
-	textWithIconContainer: { flexDirection: 'row', alignItems: 'center' },
-})
+});
