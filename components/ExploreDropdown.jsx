@@ -1,10 +1,15 @@
 import React from 'react';
-import { View, Button, Image, StyleSheet, Text, Picker } from 'react-native';
-import { LinearGradient } from 'expo-linear-gradient';
+import {
+	View,
+	Button,
+	Image,
+	StyleSheet,
+	Text,
+	TouchableOpacity,
+} from 'react-native';
 import { ColorPalette } from '../constants/colorPalette';
 import { MaterialIcons } from '@expo/vector-icons';
 import { CustomPicker } from './CustomPicker';
-import { TouchableOpacity } from 'react-native-gesture-handler';
 
 export class ExploreDropdown extends React.Component {
 	state = {
