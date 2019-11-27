@@ -1,13 +1,10 @@
 import React from 'react';
-import { StyleSheet, Button, Text, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import { ColorPalette } from '../constants/colorPalette';
 
 import { connect } from 'react-redux';
-import { sampleAction } from '../actions/fooActions';
-import { sampleRestaurant } from '../constants/sampleQueryResponse';
 import { ExploreDropdown } from '../components/ExploreDropdown';
 import SafeAreaView from 'react-native-safe-area-view';
-import { CustomPicker } from '../components/CustomPicker';
 
 class ExploreScreen extends React.Component {
 	render() {
