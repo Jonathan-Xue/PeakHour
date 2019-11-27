@@ -91,24 +91,24 @@ export class CustomPicker extends React.Component {
 
 const styles = StyleSheet.create({
 	contentContainer: {
-		width: '100%',
-		backgroundColor: ColorPalette.white,
-		position: 'absolute',
-		bottom: 0,
 		alignItems: 'center',
+		backgroundColor: ColorPalette.white,
+		bottom: 0,
+		position: 'absolute',
+		width: '100%',
 	},
 	backgroundDimContainer: {
+		backgroundColor: '#000A',
 		width: '100%',
 		height: '100%',
-		backgroundColor: '#000A',
 	},
 	fill: {
 		width: '100%',
 		height: '100%',
 	},
 	optionContainer: {
+		borderBottomWidth: 1,
 		padding: 20,
 		width: '100%',
-		borderBottomWidth: 1,
 	},
 });

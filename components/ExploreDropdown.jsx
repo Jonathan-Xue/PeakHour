@@ -87,9 +87,9 @@ export class ExploreDropdown extends React.Component {
 
 const styles = StyleSheet.create({
 	container: {
-		flex: 1,
 		alignItems: 'center',
-		justifyContent: 'center',
 		backgroundColor: ColorPalette.white,
+		flex: 1,
+		justifyContent: 'center',
 	},
 });
