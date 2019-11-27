@@ -1,17 +1,12 @@
 import React from 'react';
-import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { Image, StyleSheet, Text, View } from 'react-native';
 import { ColorPalette } from '../constants/colorPalette';
 import { LinearGradient } from 'expo-linear-gradient';
 import { MaterialIcons } from '@expo/vector-icons';
 
 export const RestaurantCard = ({ restaurant }) => {
-    // TODO: Replace With OnPress Function
-    const onPress = (restaurant) => {
-        alert(restaurant.name + ' Selected');
-    }
-
 	return (
-		<TouchableOpacity style={styles.container} onPress={() => { onPress(restaurant) }}>
+		<View style={styles.container}>
 			<Image resizeMode='cover' source={restaurant.image} style={styles.image}/>
 			<LinearGradient colors={['transparent', '#41414199', '#0E0E0E99']} style={styles.gradient}/>
 			<View style={styles.restaurantDetailsContainer}>
@@ -22,7 +17,7 @@ export const RestaurantCard = ({ restaurant }) => {
 
 				<Text style={styles.restaurantRatingText}>{restaurant.rating}<MaterialIcons name='star' size={16} color={ColorPalette.orange}/></Text>	
 			</View>
-		</TouchableOpacity>
+		</View>
 	);
 };
 
@@ -41,22 +36,21 @@ const styles = StyleSheet.create({
 	gradient: {
 		borderRadius: 10,
 		height: '100%',
-		position: 'absolute',
 		width: '100%',
 
+		position: 'absolute',
 		left: 0,
 		right: 0,
 		top: 0,
 	},
 	restaurantDetailsContainer: {
 		alignItems: 'center',
-		flex: 1,
 		flexDirection: 'row',
 		justifyContent: 'space-between',
 		padding: 10,
-		position: 'absolute',
 		width: '100%',
 
+		position: 'absolute',
 		bottom: 0
 	},
 	restaurantNameText: {
