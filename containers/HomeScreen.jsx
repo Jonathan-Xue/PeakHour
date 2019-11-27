@@ -1,12 +1,10 @@
-import React from 'react'
-import { StyleSheet, Button, Text, View } from 'react-native'
-import { ColorPalette } from '../constants/colorPalette'
+import React from 'react';
+import { StyleSheet, Button, Text, SafeAreaView, View } from 'react-native';
+import { ColorPalette } from '../constants/colorPalette';
 
-import { connect } from 'react-redux'
-import { sampleAction } from '../actions/fooActions'
-import { sampleRestaurant } from '../constants/sampleQueryResponse'
-import { ExploreDropdown } from '../components/ExploreDropdown'
-import SafeAreaView from 'react-native-safe-area-view'
+import { connect } from 'react-redux';
+import { sampleAction } from '../actions/fooActions';
+import { sampleRestaurant, sampleOrder } from '../constants/sampleQueryResponse';
 
 class HomeScreen extends React.Component {
 	render() {
@@ -20,22 +18,21 @@ class HomeScreen extends React.Component {
 					}}
 				/>
 			</SafeAreaView>
-		)
-	}
+		);
+	};
 }
 
 const styles = StyleSheet.create({
 	container: {
 		backgroundColor: ColorPalette.white,
-		width: '100%',
-		height: '100%',
-	},
+		flex: 1
+	}
 })
 
 const mapStateToProps = store => {
 	return {
 		sample: store.sample,
-	}
-}
+	};
+};
 
-export default connect(mapStateToProps, undefined)(HomeScreen)
+export default connect(mapStateToProps, undefined)(HomeScreen);

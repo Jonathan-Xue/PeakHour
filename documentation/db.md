@@ -37,12 +37,12 @@
     user_id: <ObjectID>
     order: [
         {
-            id: <item_id>
+            item_id: <item_id>
             quantity: <Integer>
             additional_information: <String>
         },
         {
-            id: <item_id>
+            item_id: <item_id>
             quantity: <Integer>
             additional_information: <String>
         },

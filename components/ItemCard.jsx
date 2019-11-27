@@ -20,7 +20,6 @@ export const ItemCard = ({ item }) => {
 const styles = StyleSheet.create({
     container: {
         backgroundColor: ColorPalette.white,
-        flex: 1,
         padding: 15,
         elevation: 5,
         shadowColor: ColorPalette.black,
@@ -32,7 +31,6 @@ const styles = StyleSheet.create({
         }
     },
     header: {
-        flex: 1,
         flexDirection: 'row',
         justifyContent: 'space-between'
     },

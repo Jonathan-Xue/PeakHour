@@ -83,3 +83,38 @@ export const sampleRestaurant = {
         coordinates : [40.111490, -88.229010]
     }
 };
+
+export const sampleOrder = {
+    _id: 0,
+    restaurant_id: 0,
+    user_id: 0,
+    order: [
+        {
+            item_id: 0,
+            name: "Coffee",
+            unit_price: 2.99,
+            quantity: 2,
+            additional_information: "---"
+        },
+        {
+            item_id: 2,
+            name: "Potstickers", 
+            unit_price: 6.99,
+            quantity: 3,
+            additional_information: "Three portions of soy sauce on the side."
+        },
+        {
+            item_id: 7,
+            name: "Salt & Pepper Shrimp",
+            unit_price: 9.99,
+            quantity: 1,
+            additional_information: "---"
+        }
+    ],
+    gross_price: 19.97,
+    sales_price: 21.87,
+    time_placed: "11/27/2019, 1:56 PM",
+    pickup_time: "11/27/2019, 2:16 PM",
+    carryout: true,
+    fulfilled: false,
+};
