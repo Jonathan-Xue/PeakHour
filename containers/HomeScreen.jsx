@@ -5,6 +5,7 @@ import { ColorPalette } from '../constants/colorPalette';
 import { connect } from 'react-redux';
 import { sampleAction } from '../actions/fooActions';
 import { sampleRestaurant } from '../constants/sampleQueryResponse';
+import { RestaurantCard } from '../components/RestaurantCard';
 
 class HomeScreen extends React.Component {
     render() {
@@ -17,6 +18,8 @@ class HomeScreen extends React.Component {
                         this.props.dispatch(sampleAction())
                     }}
                 />
+
+                <RestaurantCard restaurant = {sampleRestaurant}></RestaurantCard>
             </View>
         );
     };

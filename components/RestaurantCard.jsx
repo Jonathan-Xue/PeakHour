@@ -1,9 +1,8 @@
 import React from 'react';
-import { View, Image, StyleSheet, Text } from 'react-native';
-import { LinearGradient } from 'expo-linear-gradient';
+import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { ColorPalette } from '../constants/colorPalette';
+import { LinearGradient } from 'expo-linear-gradient';
 import { MaterialIcons } from '@expo/vector-icons';
-import { TouchableOpacity } from 'react-native-gesture-handler';
 
 export const RestaurantCard = ({ restaurant }) => {
     // TODO: Replace With OnPress Function

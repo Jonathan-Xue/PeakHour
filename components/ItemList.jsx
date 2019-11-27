@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, SectionList, Text, TouchableOpacity, View } from 'react-native';
+import { StyleSheet, SectionList, Text, TouchableOpacity } from 'react-native';
 import { ColorPalette } from '../constants/colorPalette';
 
 import  { ItemCard } from './ItemCard';
