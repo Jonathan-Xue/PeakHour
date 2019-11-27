@@ -1,20 +1,9 @@
 import React from 'react';
-import {
-	Animated,
-	View,
-	Dimensions,
-	StyleSheet,
-	Text,
-	Picker,
-	Modal,
-} from 'react-native';
-// import Modal from 'react-native-modal';
-import { LinearGradient } from 'expo-linear-gradient';
+import { Animated, View, StyleSheet, Text, Modal } from 'react-native';
 import { ColorPalette } from '../constants/colorPalette';
-import { MaterialIcons } from '@expo/vector-icons';
 import { TouchableOpacity } from 'react-native-gesture-handler';
-import { getStatusBarHeight } from 'react-native-status-bar-height';
-import { HeaderTitle } from 'react-navigation-stack';
+
+const DURATION = 200;
 
 export class CustomPicker extends React.Component {
 	state = {
@@ -35,11 +24,11 @@ export class CustomPicker extends React.Component {
 		Animated.parallel([
 			Animated.timing(this.state.height, {
 				toValue: 1,
-				duration: 200,
+				duration: DURATION,
 			}),
 			Animated.timing(this.state.opacity, {
 				toValue: 100,
-				duration: 200,
+				duration: DURATION,
 			}),
 		]).start();
 	};
@@ -48,11 +37,11 @@ export class CustomPicker extends React.Component {
 		Animated.parallel([
 			Animated.timing(this.state.height, {
 				toValue: 0,
-				duration: 200,
+				duration: DURATION,
 			}),
 			Animated.timing(this.state.opacity, {
 				toValue: 0,
-				duration: 200,
+				duration: DURATION,
 			}),
 		]).start(() => callback(param));
 	};
@@ -122,5 +111,4 @@ const styles = StyleSheet.create({
 		width: '100%',
 		borderBottomWidth: 1,
 	},
-	textWithIconContainer: { flexDirection: 'row', alignItems: 'center' },
 });
