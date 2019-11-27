@@ -14,6 +14,8 @@
     ```
     _id: <ObjectID>
     name: <String>
+    address: <String>
+    rating: <Double>
     menu: {
         <category>: [<item_id>, <item_id>, ...],
         <category>: [<item_id>, <item_id>, ...],

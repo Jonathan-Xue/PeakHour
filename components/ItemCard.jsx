@@ -1,9 +1,8 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { ColorPalette } from '../constants/colorPalette';
-import { TouchableHighlight } from 'react-native';
 
-const ItemCard = ({ item }) => {
+export const ItemCard = ({ item }) => {
     return (
         <View style={styles.container}>
             <View style={styles.header}>
@@ -49,5 +48,3 @@ const styles = StyleSheet.create({
         fontSize: 12
     },
 });
-
-export default ItemCard

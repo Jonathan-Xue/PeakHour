@@ -2,9 +2,9 @@ import React from 'react';
 import { StyleSheet, SectionList, Text, TouchableOpacity, View } from 'react-native';
 import { ColorPalette } from '../constants/colorPalette';
 
-import ItemCard from './ItemCard';
+import  { ItemCard } from './ItemCard';
 
-const ItemList = ({ restaurantMenu }) => {
+export const ItemList = ({ restaurantMenu }) => {
     // TODO: Replace With OnPress Function
     const onPress = (item) => {
         alert(item.name + ' Selected');
@@ -53,5 +53,3 @@ const styles = StyleSheet.create({
         marginVertical: 7.5
     }
 });
-
-export default ItemList;

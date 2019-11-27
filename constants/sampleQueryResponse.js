@@ -2,6 +2,9 @@
 export const sampleRestaurant = {
     _id: 0,
     name: "Cravings",
+    address: "603 S Wright St, Champaign, IL 61820",
+    image: require("../assets/bangkok_thai.jpg"),
+    rating: 4.9,
     menu: {
         "Beverages": [
             {
