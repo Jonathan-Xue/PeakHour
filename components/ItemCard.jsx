@@ -27,22 +27,22 @@ const styles = StyleSheet.create({
         shadowRadius: 3,
         shadowOffset: {
             height: 1,
-            width: 1
-        }
+            width: 1,
+        },
     },
     header: {
         flexDirection: 'row',
-        justifyContent: 'space-between'
+        justifyContent: 'space-between',
     },
     header_text: {
         color: ColorPalette.black,
-        fontSize: 18
+        fontSize: 18,
     },
     description: {
         marginTop: 10,
     },
     description_text: {
         color: ColorPalette.black,
-        fontSize: 12
-    }
+        fontSize: 12,
+    },
 });

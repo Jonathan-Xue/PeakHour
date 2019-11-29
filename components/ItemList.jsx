@@ -8,7 +8,7 @@ export const ItemList = ({ restaurantMenu }) => {
     // TODO: Replace With OnPress Function
     const onPress = (item) => {
         alert(item.name + ' Selected');
-    }
+    };
 
     return (
         <SectionList
@@ -34,7 +34,7 @@ export const ItemList = ({ restaurantMenu }) => {
             style={styles.container}
         />
     );
-}
+};
 
 const styles = StyleSheet.create({
     container: {
@@ -46,10 +46,10 @@ const styles = StyleSheet.create({
         fontSize: 18,
         fontWeight: 'bold',
         paddingLeft: 20,
-        paddingVertical: 10
+        paddingVertical: 10,
     },
     card: {
         marginHorizontal: 10,
-        marginVertical: 7.5
-    }
+        marginVertical: 7.5,
+    },
 });

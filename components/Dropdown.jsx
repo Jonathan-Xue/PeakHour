@@ -41,7 +41,7 @@ export class Dropdown extends React.Component {
 			</TouchableOpacity>
 		);
 	};
-}
+};
 
 const styles = StyleSheet.create({
 	dropdown: {
@@ -50,6 +50,6 @@ const styles = StyleSheet.create({
 		borderRadius: 20,
 		flexDirection: 'row',
 		paddingHorizontal: 15,
-		paddingVertical: 10
-	}
+		paddingVertical: 10,
+	},
 });

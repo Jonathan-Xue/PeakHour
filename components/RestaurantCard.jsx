@@ -25,12 +25,12 @@ const styles = StyleSheet.create({
 	container: {
 		backgroundColor: ColorPalette.orange,
 		borderRadius: 10,
-		height: 200
+		height: 200,
 	},
 	image: {
 		borderRadius: 10,
 		height: '100%',
-		width: '100%'
+		width: '100%',
 	},
 	gradient: {
 		borderRadius: 10,
@@ -50,20 +50,20 @@ const styles = StyleSheet.create({
 		width: '100%',
 
 		position: 'absolute',
-		bottom: 0
+		bottom: 0,
 	},
 	restaurantNameText: {
 		color: ColorPalette.white,
 		fontSize: 18,
-		fontWeight: 'bold'
+		fontWeight: 'bold',
 	},
 	restaurantLocationText: {
 		color: ColorPalette.white,
-		fontSize: 14
+		fontSize: 14,
 	},
 	restaurantRatingText: {
 		color: ColorPalette.orange,
 		fontSize: 18,
-		fontWeight: 'bold'
-	}
+		fontWeight: 'bold',
+	},
 });

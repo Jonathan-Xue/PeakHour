@@ -6,7 +6,7 @@ export const OrderItemCard = ({ item, editable }) => {
     // TODO: Replace With OnPress Function
     const onPress = (elementName) => {
         alert(elementName + ' Pressed');
-    }
+    };
 
     return (
         <View style={styles.container}>
@@ -26,30 +26,30 @@ export const OrderItemCard = ({ item, editable }) => {
 
 const styles = StyleSheet.create({
     container: {
-        backgroundColor: ColorPalette.white
+        backgroundColor: ColorPalette.white,
     },
     header: {
         flexDirection: 'row',
-        justifyContent: 'space-between'
+        justifyContent: 'space-between',
     },
     header_text: {
         color: ColorPalette.black,
-        fontSize: 18
+        fontSize: 18,
     },
     additional_information: {
         color: ColorPalette.black,
         fontSize: 12,
-        marginTop: 5
+        marginTop: 5,
     },
     interactive_text_container: {
         flexDirection: 'row',
-        marginTop: 5
+        marginTop: 5,
     },
     interactive_text: {
         color: ColorPalette.orange,
         fontSize: 16,
         fontWeight: 'bold',
         marginRight: 10,
-		textDecorationLine: 'underline'
-    }
+		textDecorationLine: 'underline',
+    },
 });

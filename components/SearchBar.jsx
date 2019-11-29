@@ -8,7 +8,7 @@ export class SearchBar extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			value: ''
+			value: '',
 		};
 	};
 
@@ -34,7 +34,7 @@ export class SearchBar extends React.Component {
             </View>
 		);
 	};
-}
+};
 
 const styles = StyleSheet.create({
 	container: {
@@ -45,14 +45,14 @@ const styles = StyleSheet.create({
         borderWidth: 1,
 		flexDirection: 'row',
 		paddingHorizontal: 15,
-		paddingVertical: 15
+		paddingVertical: 15,
     },
     icon: {
-        marginRight: 5
+        marginRight: 5,
     },
     search_bar: {
         flex: 1,
         fontSize: 18,
-        marginLeft: 5
-    }
+        marginLeft: 5,
+    },
 });
