@@ -25,8 +25,8 @@ class HomeScreen extends React.Component {
 const styles = StyleSheet.create({
 	container: {
 		backgroundColor: ColorPalette.white,
-		flex: 1
-	}
+		flex: 1,
+	},
 })
 
 const mapStateToProps = store => {

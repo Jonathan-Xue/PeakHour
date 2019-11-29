@@ -75,7 +75,7 @@ export class CustomPicker extends React.Component {
 			</Modal>
 		);
 	};
-}
+};
 
 const styles = StyleSheet.create({
 	backgroundContainer: {
@@ -83,7 +83,7 @@ const styles = StyleSheet.create({
 	},
 	background: {
 		height: '100%',
-		width: '100%'
+		width: '100%',
 	},
 	optionsContainer: {
 		alignItems: 'center',
@@ -91,12 +91,12 @@ const styles = StyleSheet.create({
 		width: '100%',
 
 		position: 'absolute',
-		bottom: 0
+		bottom: 0,
 	},
 	option: {
 		borderBottomColor: ColorPalette.black,
 		borderBottomWidth: 1,
 		padding: 20,
-		width: '100%'
-	}
+		width: '100%',
+	},
 });

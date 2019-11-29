@@ -27,6 +27,6 @@ const styles = StyleSheet.create({
     },
 	iconLabel: {
 		fontSize: 18,
-        textAlign: 'center'
-	}
+        textAlign: 'center',
+	},
 });
