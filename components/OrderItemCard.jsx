@@ -17,7 +17,7 @@ export const OrderItemCard = ({ item, editable }) => {
             
             <Text style={styles.additional_information}>{item.additional_information}</Text>
             { editable && <View style={styles.interactive_text_container}>
-                <Text style={{...styles.interactive_text}} onPress={() => { onPress("Edit") }}>Edit</Text>
+                <Text style={styles.interactive_text} onPress={() => { onPress("Edit") }}>Edit</Text>
                 <Text style={styles.interactive_text} onPress={() => { onPress("Remove") }}>Remove</Text>
             </View>}
         </View>

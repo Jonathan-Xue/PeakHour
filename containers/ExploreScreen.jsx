@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, View, SafeAreaView, View } from 'react-native';
+import { StyleSheet, SafeAreaView, View } from 'react-native';
 import { ColorPalette } from '../constants/colorPalette';
 
 import { connect } from 'react-redux';

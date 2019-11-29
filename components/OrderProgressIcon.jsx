@@ -12,7 +12,7 @@ export const OrderProgressIcon = ({ iconName, iconLabel, active }) => {
     return (
         <View style={styles.container}>
             {<MaterialCommunityIcons name={iconName} size={active ? 132 : 60} color={active ? ColorPalette.orange : ColorPalette.black} style={styles.icon}/>}
-            <Text style={[styles.iconLabel, {color: active ? ColorPalette.orange : ColorPalette.black}]}>{iconLabel}</Text>
+            <Text style={{...styles.iconLabel, color: active ? ColorPalette.orange : ColorPalette.black}}>{iconLabel}</Text>
         </View>
     );
 };
