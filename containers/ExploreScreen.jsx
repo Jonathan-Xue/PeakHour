@@ -1,38 +1,28 @@
 import React from 'react';
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet, View, SafeAreaView, View } from 'react-native';
 import { ColorPalette } from '../constants/colorPalette';
 
 import { connect } from 'react-redux';
-import { ExploreDropdown } from '../components/ExploreDropdown';
-import SafeAreaView from 'react-native-safe-area-view';
+import { Dropdown } from '../components/Dropdown';
 
 class ExploreScreen extends React.Component {
 	render() {
 		return (
 			<SafeAreaView style={styles.container}>
 				<View style={{ flexDirection: 'row' }}>
-					<ExploreDropdown
-						title="Sort"
-						options={['Price', 'Popularity']}
-						onPress={this._togglePicker}
-					></ExploreDropdown>
-					<ExploreDropdown
-						title="Distance"
-						options={['Super Close', 'Very Far', 'On the moon']}
-						onPress={this._togglePicker}
-					></ExploreDropdown>
+					<Dropdown title="Sort" options={['Default', 'Price', 'Popularity']} onPress={undefined}/>
+					<Dropdown title="Distance" options={['Default', 'Super Close', 'Very Far', 'On the moon']} onPress={undefined}/>
 				</View>
 			</SafeAreaView>
 		);
-	}
-}
+	};
+};
 
 const styles = StyleSheet.create({
 	container: {
 		backgroundColor: ColorPalette.white,
-		width: '100%',
-		height: '100%',
-	},
+		flex: 1
+	}
 });
 
 const mapStateToProps = store => {
