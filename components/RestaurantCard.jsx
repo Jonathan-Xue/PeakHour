@@ -25,8 +25,7 @@ const styles = StyleSheet.create({
 	container: {
 		backgroundColor: ColorPalette.orange,
 		borderRadius: 10,
-		height: 200,
-		width: '90%'
+		height: 200
 	},
 	image: {
 		borderRadius: 10,

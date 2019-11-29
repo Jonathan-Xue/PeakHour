@@ -44,5 +44,5 @@ const styles = StyleSheet.create({
     description_text: {
         color: ColorPalette.black,
         fontSize: 12
-    },
+    }
 });
